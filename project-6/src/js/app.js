@@ -1,4 +1,6 @@
+
 App = {
+
     web3Provider: null,
     contracts: {},
     emptyAddress: "0x0000000000000000000000000000000000000000",
@@ -83,7 +85,7 @@ App = {
     },
 
     getMetaskAccountID: function () {
-        web3 = new Web3(App.web3Provider);
+      let  web3 = new Web3(App.web3Provider);
 
         // Retrieving accounts
         web3.eth.getAccounts(function(err, res) {
