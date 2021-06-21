@@ -153,10 +153,10 @@ contract SupplyChain {
   }
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes, uint _productPrice) public 
+  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public 
   {
     // Add the new item as part of Harvest
-    items[sku] = Item({ sku: sku, upc: _upc, ownerID: msg.sender, originFarmerID: _originFarmerID, originFarmName: _originFarmName, originFarmInformation: _originFarmInformation, originFarmLatitude: _originFarmLatitude, originFarmLongitude: _originFarmLongitude, productID: upc+sku , productNotes: _productNotes, productPrice: _productPrice, itemState: State.Harvested, distributorID: 0, retailerID: 0, consumerID: 0 });
+    items[sku] = Item({ sku: sku, upc: _upc, ownerID: msg.sender, originFarmerID: _originFarmerID, originFarmName: _originFarmName, originFarmInformation: _originFarmInformation, originFarmLatitude: _originFarmLatitude, originFarmLongitude: _originFarmLongitude, productID: upc+sku , productNotes: _productNotes, productPrice: 0, itemState: State.Harvested, distributorID: 0, retailerID: 0, consumerID: 0 });
     // Increment sku
     sku = sku + 1;
     // Emit the appropriate event
@@ -171,7 +171,7 @@ contract SupplyChain {
     verifyCaller(items[_upc].originFarmerID)
   {
     // Update the appropriate fields
-    
+    items[_upc].itemState = State.Processed;
     // Emit the appropriate event
     emit Processed(upc);
   }
@@ -184,7 +184,7 @@ contract SupplyChain {
   verifyCaller(items[_upc].originFarmerID)
   {
     // Update the appropriate fields
-    
+    items[_upc].itemState = State.Packed;
     // Emit the appropriate event
     emit Packed(upc);
   }
@@ -197,7 +197,9 @@ contract SupplyChain {
     verifyCaller(items[_upc].originFarmerID)
   {
     // Update the appropriate fields
-    
+    items[_upc].productPrice = _price; 
+
+    items[_upc].itemState = State.ForSale;
     // Emit the appropriate event
     emit ForSale(upc);
   }
@@ -215,9 +217,14 @@ contract SupplyChain {
     {
     
     // Update the appropriate fields - ownerID, distributorID, itemState
-    
+    items[_upc].consumerID = msg.sender;
+    items[_upc].ownerID = msg.sender;
+    items[_upc].distributorID = msg.sender;
+    items[_upc].itemState = State.Sold;
     // Transfer money to farmer
-    
+    items[_upc].originFarmerID.transfer(items[upc].productPrice);
+
+    items[_upc].itemState = State.Sold;
     // emit the appropriate event
     emit Sold(upc);
   }
@@ -231,7 +238,7 @@ contract SupplyChain {
     verifyCaller(items[_upc].originFarmerID)
     {
     // Update the appropriate fields
-    
+    items[_upc].itemState = State.Shipped;
     // Emit the appropriate event
     emit Shipped(upc);
   }
@@ -244,7 +251,11 @@ contract SupplyChain {
     // Access Control List enforced by calling Smart Contract / DApp
     {
     // Update the appropriate fields - ownerID, retailerID, itemState
-    
+
+    items[_upc].ownerID = msg.sender;
+    items[_upc].retailerID = msg.sender;
+
+    items[_upc].itemState = State.Received;
     // Emit the appropriate event
     emit Received(upc);
   }
@@ -258,6 +269,9 @@ contract SupplyChain {
     {
     // Update the appropriate fields - ownerID, consumerID, itemState
     
+    items[_upc].ownerID = msg.sender;
+    items[_upc].consumerID = msg.sender;
+    items[_upc].itemState = State.Purchased;
     // Emit the appropriate event
     emit Purchased(upc);
   }
