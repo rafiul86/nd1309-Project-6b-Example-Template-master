@@ -326,7 +326,7 @@ contract SupplyChain {
   uint    productID,
   string  productNotes,
   uint    productPrice,
-  State    itemState,
+  uint    itemState,
   address distributorID,
   address retailerID,
   address consumerID
@@ -338,7 +338,7 @@ contract SupplyChain {
   productID =items[_upc].productID;
   productNotes = items[_upc].productNotes;
   productPrice =items[_upc].productPrice;
-  itemState = items[_upc].itemState;
+  itemState = 0;
   distributorID = items[_upc].distributorID;
   retailerID = items[_upc].retailerID;
   consumerID = items[_upc].consumerID;
