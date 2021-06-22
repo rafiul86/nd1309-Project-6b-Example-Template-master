@@ -38,7 +38,7 @@ Infura provides the tools and infrastructure that allow developers to easily tak
 
 One of the key technologies mentioned was the Interplanetary File System (IPFS). It’s a peer-to-peer (p2p) filesharing system that aims to fundamentally change the way information is distributed across & beyond the globe. IPFS consists of several innovations in communication protocols and distributed systems that have been combined to produce a file system like no other. So to understand the full breadth and depth of what IPFS is trying to achieve, it’s important to understand the tech breakthroughs that make it possible.
 
-#### General Write Up
+
 
 
 ## Libraries and versions
