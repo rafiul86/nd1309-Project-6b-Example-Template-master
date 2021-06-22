@@ -74,7 +74,7 @@ App = {
         else if (window.web3) {
             App.web3Provider = window.web3.currentProvider;
         }
-        // If no injected web3 instance is detected, fall back to Ganache
+        // If no injected web3 instance is detected, fall back to Ganache https://rinkeby.infura.io/v3/3442a1296d614f0fb389d044457a9160
         else {
             App.web3Provider = new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/3442a1296d614f0fb389d044457a9160');
         }

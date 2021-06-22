@@ -4,13 +4,13 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 
 The DApp User Interface when running should look like...
 
-![truffle test](images/ftc_product_overview.png)
+![UML Activity Diagram](https://user-images.githubusercontent.com/68476971/122929727-1587c180-d38d-11eb-8537-3c3fb7a11cd4.png)
 
-![truffle test](images/ftc_farm_details.png)
+![UML Sequence Diagram](https://user-images.githubusercontent.com/68476971/122929772-233d4700-d38d-11eb-8ba7-4f196fe38343.png)
 
-![truffle test](images/ftc_product_details.png)
+![UML state diagram](https://user-images.githubusercontent.com/68476971/122929813-2d5f4580-d38d-11eb-84ca-f70379b22605.png)
 
-![truffle test](images/ftc_transaction_history.png)
+![Class Structure](https://user-images.githubusercontent.com/68476971/122929838-36e8ad80-d38d-11eb-9a71-2bb4143dd6ad.png)
 
 
 ## Getting Started
@@ -29,24 +29,8 @@ Give examples (to be clarified)
 
 A step by step series of examples that tell you have to get a development env running
 
-Clone this repository:
 
-```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
-```
 
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
-
-```
-cd project-6
-npm install
-```
-
-Launch Ganache:
-
-```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
-```
 
 Your terminal should look something like this:
 
@@ -102,9 +86,11 @@ to make the web faster, safer, and more open.
 
 See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
 
-## Acknowledgments
-
-* Solidity
-* Ganache-cli
-* Truffle
+## Libraries and versions
+* node -v 10.0
+* Solidity v0.4.24
+* web3
+* Truffle v4.1.14
 * IPFS
+* Infura
+* truffle-hdwallet-provider
