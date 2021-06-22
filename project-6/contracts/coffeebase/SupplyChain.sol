@@ -233,7 +233,7 @@ contract SupplyChain {
     // Call modifier to check if upc has passed previous supply chain stage
      sold(_upc)
     // Call modifier to verify caller of this function
-     verifyCaller(items[_upc].ownerID)
+     verifyCaller(items[_upc].distributorID)
     {
     // Update the appropriate fields
     items[_upc].ownerID = msg.sender;
@@ -265,19 +265,12 @@ contract SupplyChain {
   function purchaseItem(uint _upc) public 
     // Call modifier to check if upc has passed previous supply chain stage
     received(_upc)
-
-    checkValue(_upc)
-
-    paidEnough(items[upc].productPrice)
     // Access Control List enforced by calling Smart Contract / DApp
     {
     // Update the appropriate fields - ownerID, consumerID, itemState
-    
     items[_upc].ownerID = msg.sender;
     items[_upc].consumerID = msg.sender;
     items[_upc].itemState = State.Purchased;
-
-    items[_upc].retailerID.transfer(items[_upc].productPrice);
     // Emit the appropriate event
     emit Purchased(_upc);
   }
