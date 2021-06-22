@@ -1,4 +1,4 @@
-### Project write-up - UML
+## Project write-up - UML
 
 ##  Activity diagram
 
@@ -34,7 +34,7 @@ Truffle HDWallet provider is a convenient and easy to configure network connecti
 Infura provides the tools and infrastructure that allow developers to easily take their blockchain application from testing to scaled deployment - with simple, reliable access to Ethereum and IPFS. ... Blockchain applications need connections to peer-to-peer networks which can require long initialization times.
 
 
-### Project write-up - IPFS
+## Project write-up - IPFS
 
 One of the key technologies mentioned was the Interplanetary File System (IPFS). It’s a peer-to-peer (p2p) filesharing system that aims to fundamentally change the way information is distributed across & beyond the globe. IPFS consists of several innovations in communication protocols and distributed systems that have been combined to produce a file system like no other. So to understand the full breadth and depth of what IPFS is trying to achieve, it’s important to understand the tech breakthroughs that make it possible.
 
