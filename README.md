@@ -1,40 +1,40 @@
-#### Project write-up - UML
+### Project write-up - UML
 
-###  Activity diagram
+##  Activity diagram
 
 ![UML Activity Diagram](https://user-images.githubusercontent.com/68476971/122929727-1587c180-d38d-11eb-8537-3c3fb7a11cd4.png)
 
-###  Sequence diagram
+##  Sequence diagram
 
 ![UML Sequence Diagram](https://user-images.githubusercontent.com/68476971/122929772-233d4700-d38d-11eb-8ba7-4f196fe38343.png)
 
-###  State diagram
+## State diagram
 
 ![UML state diagram](https://user-images.githubusercontent.com/68476971/122929813-2d5f4580-d38d-11eb-84ca-f70379b22605.png)
 
-###  Class Diagram diagram
+##  Class Diagram diagram
 
 ![Class Structure](https://user-images.githubusercontent.com/68476971/122929838-36e8ad80-d38d-11eb-9a71-2bb4143dd6ad.png)
 
-#### Project write-up - Libraries
+### Project write-up - Libraries
 
 ## Roles library 
 It is a boilerplate as to be used as an interface to assign roles of different activity holder in blockchain apps.
 
-# Truffle 
+## Truffle 
 Truff;e is  boilerplate for programmers to make development easier. In simple words, Truffle is a development environment, testing framework, and asset pipeline all rolled into one. ... With Truffle, you can compile and deploy Smart Contracts, inject them into web apps, and also develop front-end for DApps. Today, Truffle is one of the most widely used IDEs for Ethereum Blockchain.
 
-# Web3
+## Web3
 Web3. js enables you to fulfill the second responsibility: developing clients that interact with The Etherem Blockchain. It is a collection of libraries that allow you to perform actions like send Ether from one account to another, read and write data from smart contracts, create smart contracts, and so much more!
 
-# Truffle-HDWallet-Provider
+## Truffle-HDWallet-Provider
 Truffle HDWallet provider is a convenient and easy to configure network connection to ethereum through infura.io (or any other compatible provider). For example the HDWallet provider add some features required by Truffle that are not available with infura like event filtering and transaction signing.
 
-# INFURA
+## INFURA
 Infura provides the tools and infrastructure that allow developers to easily take their blockchain application from testing to scaled deployment - with simple, reliable access to Ethereum and IPFS. ... Blockchain applications need connections to peer-to-peer networks which can require long initialization times.
 
 
-#### Project write-up - IPFS
+### Project write-up - IPFS
 
 One of the key technologies mentioned was the Interplanetary File System (IPFS). It’s a peer-to-peer (p2p) filesharing system that aims to fundamentally change the way information is distributed across & beyond the globe. IPFS consists of several innovations in communication protocols and distributed systems that have been combined to produce a file system like no other. So to understand the full breadth and depth of what IPFS is trying to achieve, it’s important to understand the tech breakthroughs that make it possible.
 
